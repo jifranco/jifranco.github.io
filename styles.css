@@ -565,6 +565,7 @@ footer span a:hover{
        display: flex;
        justify-content: center;
        margin: 0 auto 60px;
+       overflow: hidden;
     }
     .about .about-content .right{
         flex: 100%;
@@ -596,4 +597,101 @@ footer span a:hover{
     .home .home-content .text-3{
         font-size: 27px;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.services,
+.teams {
+  color: #fff;
+  background: #111;
+}
+
+.services .title::before,
+.teams .title::after {
+  background: #fff;
+}
+
+.services .title::after,
+.teams .title::after {
+  background: #111;
+  content: "what i provide";
+}
+
+/* Responsive layout for cards */
+.services .serv-content,
+.teams .serv-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Distribute cards evenly */
+}
+
+.services .serv-content .card,
+.teams .serv-content .card {
+  width: calc(33% - 20px); /* Maintain same width on large screens */
+  margin-bottom: 20px; /* Add some margin for spacing */
+  background: #222;
+  text-align: center;
+  border-radius: 6px;
+  padding: 50px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Adjust card width for smaller screens */
+@media (max-width: 768px) {
+  .services .serv-content .card,
+  .teams .serv-content .card {
+    width: calc(50% - 20px);
+  }
+}
+
+/* Adjust card width for even smaller screens */
+@media (max-width: 480px) {
+  .services .serv-content .card,
+  .teams .serv-content .card {
+    width: 100%; /* Make cards full width on very small screens */
+  }
+}
+
+.services .serv-content .card:hover {
+  background: #95b2b8;
+}
+
+.services .serv-content .card .box {
+  transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover .box {
+  transform: scale(1.05);
+}
+
+.services .serv-content .card i {
+  font-size: 50px;
+  color: #95b2b8;
+  transition: color 0.3s ease;
+}
+
+.services .serv-content .card:hover i {
+  color: #fff;
+}
+
+.services .serv-content .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
 }
